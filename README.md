@@ -8,6 +8,9 @@
 5. Writing out to a disk file, a sorted term dictionary
 
 ## Report
+### documents, terms, unique terms
+
+![alt text](https://github.com/nglthu/infoRetrieval/blob/master/img/processingTime.png)
 
 1. Number of documents processed
 
@@ -15,6 +18,13 @@
 
 3. Total number of unique terms found and added to the index
 
+### documents
+
+[here](infoRetrieval/cacm/documents.dat)
+
+### index
+
+[here](infoRetrieval/cacm/index.dat)
 
 # Map-reduce
 
