@@ -69,7 +69,7 @@ t2 = time.localtime()
 # set the name of the directory for the corpus
 
 
-dirname = "c:\users\datai\cacm"
+dirname = "./infoRetrieval/cacm"
 
  
 
