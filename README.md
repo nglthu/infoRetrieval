@@ -20,11 +20,11 @@
 
 ### documents
 
-[here](infoRetrieval/cacm/documents.dat)
+[here](https://github.com/nglthu/infoRetrieval/blob/master/cacm/documents.dat)
 
 ### index
 
-[here](infoRetrieval/cacm/index.dat)
+[here](https://github.com/nglthu/infoRetrieval/blob/master/cacm/index.dat)
 
 # Map-reduce
 
