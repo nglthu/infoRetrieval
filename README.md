@@ -154,6 +154,11 @@ Finds term based on a query consisting of k-grams
 3. Lossy Compression
 4. Lossless Compression
 5. Heap’s law
+```
+ To estimate the number of unique terms in a collection based upon constants k and b and the number of terms or tokens (T) parsed from all documents.
+
+  M = kT^ß
+```
 6. Zipf’s law
 7. Power law
 8. Front Coding
