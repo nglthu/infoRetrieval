@@ -145,3 +145,21 @@ Pros: use a lot more space for indexes
 ##	Bigram (k-gram) indexes
 Finds term based on a query consisting of k-grams
 
+# Index Compression
+
+## Key Terms
+
+1. Compression
+2. Rule of 30
+3. Lossy Compression
+4. Lossless Compression
+5. Heap’s law
+6. Zipf’s law
+7. Power law
+8. Front Coding
+9. Variable Byte Encoding
+10. Nibble
+11. Unary Code
+12. γ Encoding
+13. Entropy
+14. δ Codes
