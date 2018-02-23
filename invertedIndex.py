@@ -19,6 +19,7 @@
 
 import sys,os,re
 import time
+import math
 
 # define global variables used as counters
 tokens = 0
@@ -101,4 +102,7 @@ print ("Terms %i" % terms)
 t2 = time.localtime()   
 print ('Processing End Time: %.2d:%.2d' % (t2.tm_hour, t2.tm_min))
 
+# size of vocabulary (M) in Heap's law, k=40, peta=0.5
 
+M = 40*math.pow(terms, 0.5)
+print("size of vocabulary %i" %M)
