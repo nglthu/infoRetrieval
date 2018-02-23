@@ -159,6 +159,8 @@ Finds term based on a query consisting of k-grams
 
   M = kT^ß
 ```
+![alt text](https://github.com/nglthu/infoRetrieval/blob/master/Heap_law/sizeOfM.png)
+
 6. Zipf’s law
 7. Power law
 8. Front Coding
