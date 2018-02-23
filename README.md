@@ -149,24 +149,51 @@ Finds term based on a query consisting of k-grams
 
 ## Key Terms
 
-1. Compression
+1. Dictionary compression
+Aims to fit in the memory with an at least large portion of dictionaries. 
+The dictionary as a string that sorts the vocabulary lexicographically and stores it in an array of fixed-width entries or blocked storage by grouping terms into the string into blocks of size k and keeping a term pointer for the first term of each blog
+
 2. Rule of 30
+The 30 most common words account for 30% of the tokens in the written text. 
+Thus, the lossy method could be used for compression without losing its effectiveness in encoding the data.
+
 3. Lossy Compression
+amount of data is lost during this process
+
 4. Lossless Compression
+no data is lost during compression
+
 5. Heap’s law
 ```
  To estimate the number of unique terms in a collection based upon constants k and b and the number of terms or tokens (T) parsed from all documents.
 
   M = kT^ß
+  
+  in which T is the number of tokens in a collection, k and ß are parameters values
 ```
 ![alt text](https://github.com/nglthu/infoRetrieval/blob/master/Heap_law/sizeOfM.png)
 
 6. Zipf’s law
+
+cfi = ci^k as one of the types of the power law
+
 7. Power law
+
 8. Front Coding
+
 9. Variable Byte Encoding
+
 10. Nibble
+
 11. Unary Code
-12. γ Encoding
+A string of n 1s followed by a 0
+
+12. Encoding
+Two type of methods such as bytewise and bitwise. 
+As such variable byte encoding uses the integral number of byte to encode a gap instead of docID. 
+
 13. Entropy
+
 14. δ Codes
+
+asymptotically optimal for entropy H(P) → ∞
