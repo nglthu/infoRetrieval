@@ -8,8 +8,7 @@
 #  We also see the creation of a documents dictionary containing each document in sorted form with an index assigned to it.
 #  Each unique term is written out into a terms dictionary in sorted order with an index number assigned for each term.  
 #  From our readings we know that to complete teh inverted index all that we need to do is create a third file that will
-#  coorelate each term with the list of documents that it was extracted from.  We will do that in a later assignment.
-##
+#  coorelate each term with the list of documents that it was extracted from.  
 #  We can further develop this example by keeping a reference for each term of the documents that it came from and by 
 #  developing a list of the documents thus creating the term and document dictionaries. 
 #
