@@ -57,10 +57,10 @@ def stripTags(s):
 def printText(tags):
         for tag in tags:
                 if tag.__class__ == NavigableString:
-                        print tag,
+                        print (tag)
                 else:
                         printText(tag)
-        print ""
+        print("")
 
 
 # process the tokens of the source code
@@ -195,7 +195,7 @@ if __name__ == '__main__':
     # time required to process the corpus
     #
     t2 = time.localtime()   
-    print 'Start Time: %.2d:%.2d' % (t2.tm_hour, t2.tm_min)
+    print('Start Time: %.2d:%.2d' % (t2.tm_hour, t2.tm_min))
     
     #
     # Create a sqlite database to hold the inverted index.  The isolation_level statment turns
@@ -260,7 +260,7 @@ if __name__ == '__main__':
         #
         # Print the current length of the queue of URL's to crawl
         #
-        print len(tocrawl),crawling
+        print(len(tocrawl),crawling)
 
         #
         # Parse the URL and open it.
@@ -309,7 +309,7 @@ if __name__ == '__main__':
     # Display the time that the indexing process is complete, and the process of writing
     #
     t2 = time.localtime()   
-    print 'Indexing Complete, write to disk: %.2d:%.2d' % (t2.tm_hour, t2.tm_min)
+    print('Indexing Complete, write to disk: %.2d:%.2d' % (t2.tm_hour, t2.tm_min))
 
     #
     # Write the inverted index to disk
@@ -327,8 +327,8 @@ if __name__ == '__main__':
     # Documents - every document opened and read by the indexer
     # Terms - each token that was extracted from the file. 
     #
-    print "Documents %i" % documents
-    print "Terms %i" % terms
-    print "Tokens %i" % tokens
+    print("Documents %i" % documents)
+    print("Terms %i" % terms)
+    print("Tokens %i" % tokens)
     t2 = time.localtime()   
-    print 'End Time: %.2d:%.2d' % (t2.tm_hour, t2.tm_min)
+    print('End Time: %.2d:%.2d' % (t2.tm_hour, t2.tm_min))
