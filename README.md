@@ -211,3 +211,31 @@ As such variable byte encoding uses the integral number of byte to encode a gap 
 ```
 Asymptotically optimal for entropy H(P) → ∞
 ```
+
+# Web crawler
+##	What is involved in creating a web crawler?  
+Purpose: to get the information that is available on a website
+Process: As described by Manning (2009, chapter 15)
++ Begin with URL(s) constituting a seed set
++ Picking a URL from this seed set then fetches the web page at that URL
++ Parse the fetched page to extract links and texts
++ Feed the extracted texts to a text indexer
++ Add the extracted links to URL frontier
++ Corresponding pages-URL(s) are fetched by the crawler
++ URL frontier contains seed set
++ Corresponding URL are deleted from URL frontier when pages are fetched.
++ Entire process as traversing the web graph
+ 
+ ![alt text](https://github.com/nglthu/infoRetrieval/blob/master/img/basicCrawlerArchitecture.png)
+
+Figure : The basic crawler architecture extracted from Figure 20.1 (Manning, 2009, chapter 19)
+
+## Static vs dynamic web content
+
+Static: the same prebuilt content each time the page is loaded
+Dynamic: content is changed and can be generated on the fly. 
+
+
+# References: 
+Manning, C.D., Raghaven, P., & Schütze, H. (2009). An Introduction to Information Retrieval (Online ed.). Cambridge, MA: Cambridge University Press. Available at http://nlp.stanford.edu/IR-book/information-retrieval-book.html 
+
