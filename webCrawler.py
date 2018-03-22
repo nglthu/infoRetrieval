@@ -14,6 +14,7 @@ import sys, os, re
 # import urllib2
 
 import urllib.request
+# import requests
 # import urlparse
 import urllib.parse
 import sqlite3
@@ -66,11 +67,11 @@ def stripTags(s):
 
 def printText(tags):
         for tag in tags:
-                if tag.__class__ == NavigableString:
-                        print (tag)
+                if tag.__class__ == bs4.element.NavigableString:
+                        print(tag)
                 else:
                         printText(tag)
-        print("")
+        print("tag:%d"%tag)
 
 
 # process the tokens of the source code
@@ -92,6 +93,7 @@ def parsetoken(db, line):
         #
         # This routine splits the contents of the line into tokens
         l = splitchars(line)
+        print("l:%i"%l)
 
         # for each token in the line process 
         for elmt in l:
@@ -100,6 +102,7 @@ def parsetoken(db, line):
 
                 # This statement converts all letters to lower case
                 lowerElmt = elmt.lower().strip()
+                print("lower Element %i " %lowerElmt)
 
                 #
                 # Increment the counter of the number of tokens processed.  This value will
@@ -196,10 +199,19 @@ if __name__ == '__main__':
     # Get the starting URL to crawl
     #
     line = input("Enter URL to crawl (must be in the form http://www.domain.com): ")
+ 
+    # r  = requests.get("http://" +line)
 
+    # data = r.text
+    # print("data: %i"%data)f
+ 
     # the database is a simple dictionnary 
-    db = {}
-
+    db = {'keys':'djjdjdjdd', 'termid':'bac21', 'term':'community'}
+    #(DocumentName text, DocId
+    #Posting (TermId int, DocId int, tfidf real, docfreq int, termfreq int)
+    #TermDictionary (Term text, TermId int)
+    #DocumentDictionary (DocumentName text, DocId int)
+ 
     #
     # Capture the start time of the routine so that we can determine the total running
     # time required to process the corpus
@@ -211,7 +223,8 @@ if __name__ == '__main__':
     # Create a sqlite database to hold the inverted index.  The isolation_level statment turns
     # on autocommit which means that changes made in the database are committed automatically
     #
-    con = sqlite3.connect("c:\webcrawler.db")
+    #   con = sqlite3.connect("c:\webcrawler.db")
+    con = sqlite3.connect("/Data/SourceCode/infoRetrieval/indexer_part2.db")
     con.isolation_level = None
     cur = con.cursor()
 
@@ -257,11 +270,13 @@ if __name__ == '__main__':
         #
         try:
                 crawling = tocrawl.pop()
+                #print("test:"
         except:
                 crawlcomplete = False
                 continue
 
         l = len(crawling)
+        print("L:%.2d" %l)
         ext = crawling[l-4:l]
         if ext in ['.pdf', '.png', '.jpg', '.gif', '.asp']:
                 crawled.append(crawling)
@@ -270,6 +285,7 @@ if __name__ == '__main__':
         #
         # Print the current length of the queue of URL's to crawl
         #
+        print("URL")
         print(len(tocrawl),crawling)
 
         #
@@ -287,16 +303,16 @@ if __name__ == '__main__':
         #
         soup = bs4.BeautifulSoup(response)
         tok = "".join(soup.findAll("p", text=re.compile(".")))
-               
         # pass the text extracted from the web page to the parsetoken routine for indexing
         parsetoken(db, tok)
         documents += 1
+       
 
         #
         # For each unique instance of a document assign a document id (documents) and store in the documentdictionary
         #
         cur.execute("insert into DocumentDictionary values (?, ?)", (documents, crawling))
-               
+                     
         #
         # Find all of the weblinks on the page put them in the stack to crawl through
         #
@@ -314,7 +330,7 @@ if __name__ == '__main__':
                         links_queue += 1
                         tocrawl.append(link)
         crawled.append(crawling)
-
+    print("Links_queue %i" %links_queue)
     #
     # Display the time that the indexing process is complete, and the process of writing
     #
