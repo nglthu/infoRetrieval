@@ -10,12 +10,18 @@ and other formatting removed making providing a simple string containing the con
 that can be parsed and indexed by our indexer code.  
 """
 import sys, os, re
-import urllib2
-import urlparse
+
+# import urllib2
+
+import urllib.request
+# import urlparse
+import urllib.parse
 import sqlite3
 import math
 import time
-from BeautifulSoup import BeautifulSoup, NavigableString
+# from BeautifulSoup4 import BeautifulSoup4, NavigableString
+import bs4
+# from bs4 import beautifulsoup
 
 stopwords = ['the', 'of', 'and', 'to', 'in', 'you', 'it', 'with', 'that', 'or', 'was', 'he', 'is', 'for', 'this', 'his', 'as', 'not', 'at', 'by', 'all', 'they', 'but', 'be', 'on', 'from', 'had', 'her', 'work', 'are', 'any', 'she', 'if', 'said', 'so', 'which', 'have', 'do', 'we', 'no', 'my', 'were', 'them', 'their', 'him', 'one', 'will', 'me', 'there', 'who', 'up', 'other', 'an', 'its', 'when', 'what', 'can', 'may', 'into', 'out', 'must', 'your', 'then', 'would', 'could', 'more', 'now', 'has', 'like', 'down', 'where', 'been', 'through', 'did', 'away', 'these', 'such', 'set', 'back', 'some', 'than', 'way', 'made', 'our', 'after', 'well', 'should', 'get', 'even', 'am', 'go', 'saw', 'just', 'put', 'while', 'ever', 'off', 'here', 'also']
 
@@ -185,7 +191,7 @@ if __name__ == '__main__':
     #
     # Get the starting URL to crawl
     #
-    line = raw_input("Enter URL to crawl (must be in the form http://www.domain.com): ")
+    line = input("Enter URL to crawl (must be in the form http://www.domain.com): ")
 
     # the database is a simple dictionnary 
     db = {}
@@ -265,9 +271,9 @@ if __name__ == '__main__':
         #
         # Parse the URL and open it.
         #
-        url = urlparse.urlparse(crawling)
+        url = urllib.parse.urlparse(crawling)
         try:
-            response = urllib2.urlopen(crawling).read()
+            response = urllib.request.urlopen(crawling).read()
         except:
             continue
         
