@@ -2,6 +2,9 @@
 
 [Detail](https://github.com/nglthu/infoRetrieval/wiki/Positional-Index-vs-Inverted-Index)
 
+# Inverse Document Frequency
+[Detail](https://github.com/nglthu/infoRetrieval/wiki/Inverse-Document-Frequency)
+
 # Features of an inverted index.
 ## Key concept of index
 
