@@ -235,6 +235,8 @@ Figure : The basic crawler architecture extracted from Figure 20.1 (Manning, 200
 Static: the same prebuilt content each time the page is loaded
 Dynamic: content is changed and can be generated on the fly. 
 
+# Query
+[Details](https://github.com/nglthu/infoRetrieval/wiki/Query-in-Information-Retrieval-(IR))
 
 # References: 
 Manning, C.D., Raghaven, P., & Schütze, H. (2009). An Introduction to Information Retrieval (Online ed.). Cambridge, MA: Cambridge University Press. Available at http://nlp.stanford.edu/IR-book/information-retrieval-book.html 
