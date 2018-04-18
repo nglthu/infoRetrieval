@@ -1,3 +1,6 @@
+# Biword Index
+[Detail](https://github.com/nglthu/infoRetrieval/wiki/biword)
+
 # Positional Index vs Inverted index
 
 [Detail](https://github.com/nglthu/infoRetrieval/wiki/Positional-Index-vs-Inverted-Index)
