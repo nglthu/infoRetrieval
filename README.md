@@ -1,9 +1,14 @@
-# Biword Index
-[Detail](https://github.com/nglthu/infoRetrieval/wiki/Biword-index)
+# Index
 
-# Positional Index vs Inverted index
+[Biword Index](https://github.com/nglthu/infoRetrieval/wiki/Biword-index)
 
-[Detail](https://github.com/nglthu/infoRetrieval/wiki/Positional-Index-vs-Inverted-Index)
+[Phrase Index](https://github.com/nglthu/infoRetrieval/wiki/phrase-index)
+
+[Positional Index](https://github.com/nglthu/infoRetrieval/wiki/Positional-Index-vs-Inverted-Index#positional-index)
+
+[Inverted Index](https://github.com/nglthu/infoRetrieval/wiki/Positional-Index-vs-Inverted-Index#inverted-index)
+
+[Positional Index vs Inverted index](https://github.com/nglthu/infoRetrieval/wiki/Positional-Index-vs-Inverted-Index)
 
 # Inverse Document Frequency
 [Detail](https://github.com/nglthu/infoRetrieval/wiki/Inverse-Document-Frequency)
