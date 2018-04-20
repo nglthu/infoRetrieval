@@ -22,6 +22,9 @@
 4. Building a dictionary of unique terms that exist within the corpus
 5. Writing out to a disk file, a sorted term dictionary
 
+## Inverted Index Construction
+[Model](https://github.com/nglthu/infoRetrieval/wiki/Inverted-Index-Construction#inverted-index-construction)
+
 ## Report
 ### documents, terms, unique terms
 
