@@ -148,7 +148,7 @@ B-trees handle * at the end of query
 Permuterm index: handle * at the middle
 ```
 
-e.g. finding hello-> hello$, ello$h, lo$hel, o$hell
+e.g. finding hello &rightarrow; hello$, ello$h, lo$hel, o$hell
 execute different kind of search. 
 
 Cons: increase number of term in the dictionary
@@ -194,7 +194,7 @@ No data is lost during compression
 ```
  To estimate the number of unique terms in a collection based upon constants k and b and the number of terms or tokens (T) parsed from all documents.
 
-  M = kT^ß
+  M = kT<sup>ß</sup>
   
   in which T is the number of tokens in a collection, k and ß are parameters values
 ```
@@ -202,7 +202,7 @@ No data is lost during compression
 
 6. Zipf’s law
 ```
-cfi = ci^k as one of the types of the power law
+cfi = ci<sup>k</sup> as one of the types of the power law
 ```
 7. Power law
 
