@@ -193,16 +193,18 @@ No data is lost during compression
 5. Heap’s law
 ```
  To estimate the number of unique terms in a collection based upon constants k and b and the number of terms or tokens (T) parsed from all documents.
-
+```
   M = kT<sup>ß</sup>
-  
+```  
   in which T is the number of tokens in a collection, k and ß are parameters values
 ```
 ![alt text](https://github.com/nglthu/infoRetrieval/blob/master/Heap_law/sizeOfM.png)
 
 6. Zipf’s law
+
+cf<sub>i</sub> = c<sub>i</sub><sup>k</sup> 
 ```
-cfi = ci<sup>k</sup> as one of the types of the power law
+as one of the types of the power law
 ```
 7. Power law
 
