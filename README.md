@@ -1,3 +1,18 @@
+# Index
+
+[Biword Index](https://github.com/nglthu/infoRetrieval/wiki/Biword-index)
+
+[Phrase Index](https://github.com/nglthu/infoRetrieval/wiki/phrase-index)
+
+[Positional Index](https://github.com/nglthu/infoRetrieval/wiki/Positional-Index-vs-Inverted-Index#positional-index)
+
+[Inverted Index](https://github.com/nglthu/infoRetrieval/wiki/Positional-Index-vs-Inverted-Index#inverted-index)
+
+[Positional Index vs Inverted index](https://github.com/nglthu/infoRetrieval/wiki/Positional-Index-vs-Inverted-Index)
+
+# Inverse Document Frequency
+[Detail](https://github.com/nglthu/infoRetrieval/wiki/Inverse-Document-Frequency)
+
 # Features of an inverted index.
 ## Key concept of index
 
@@ -235,6 +250,13 @@ Figure : The basic crawler architecture extracted from Figure 20.1 (Manning, 200
 Static: the same prebuilt content each time the page is loaded
 Dynamic: content is changed and can be generated on the fly. 
 
+# Query
+
+[Query Type](https://github.com/nglthu/infoRetrieval/wiki/Query-in-Information-Retrieval-(IR)#type-of-query-to-use)
+
+[Boolean Retrieval vs Wildcard Queries vs Phrase Queries](https://github.com/nglthu/infoRetrieval/wiki/Query-in-Information-Retrieval-(IR)#the-differences-between-boolean-retrieval-wildcard-queries-and-phrase-queries)
+
+[Improve of Computing Score and Rank](https://github.com/nglthu/infoRetrieval/wiki/Query-in-Information-Retrieval-(IR)#some-techniques-that-can-improve-the-efficiency-of-computing-scoring-and-ranking-in-search-systems)
 
 # References: 
 Manning, C.D., Raghaven, P., & Schütze, H. (2009). An Introduction to Information Retrieval (Online ed.). Cambridge, MA: Cambridge University Press. Available at http://nlp.stanford.edu/IR-book/information-retrieval-book.html 
