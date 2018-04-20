@@ -25,6 +25,12 @@
 ## Inverted Index Construction
 [Model](https://github.com/nglthu/infoRetrieval/wiki/Inverted-Index-Construction#inverted-index-construction)
 
++ Select doc, 
++ tokenize, 
++ add to dictionary, 
++ count occurrences, 
++ sort for searching.
+
 ## Report
 ### documents, terms, unique terms
 
@@ -49,12 +55,6 @@
 Implementation of hadoop
 Search technology
 Simple db keeping track of dictionary
-## Index construction:
-+ Select doc, 
-+ tokenize, 
-+ add to dictionary, 
-+ count occurrences, 
-+ sort for searching.
 
 ## Problem:
 
@@ -74,13 +74,13 @@ throw 1
 + Then sort them
 
 
-### alogrithm
-Take all output, combine and reduce them
-Map (key=url, val=contents):
-For each word w in contents, emit (w, "1")
-Reduce(key=word, values=uniq_counts):
-Sum all "1"s in value list
-Emit result "(word, sum)"
+## Alogrithm
++ Take all output, combine and reduce them
++ Map (key=url, val=contents):
+    For each word w in contents, emit (w, "1")
+    Reduce(key=word, values=uniq_counts):
+    Sum all "1"s in value list
+    Emit result "(word, sum)"
 
 # DFS : data file system
 Automatic parallel execution in mapReduce
@@ -231,6 +231,7 @@ Asymptotically optimal for entropy H(P) → ∞
 ```
 
 # Web crawler
+
 ##	What is involved in creating a web crawler?  
 Purpose: to get the information that is available on a website
 Process: As described by Manning (2009, chapter 15)
