@@ -77,10 +77,13 @@ throw 1
 ## Alogrithm
 + Take all output, combine and reduce them
 + Map (key=url, val=contents):
-    For each word w in contents, emit (w, "1")
-    Reduce(key=word, values=uniq_counts):
-    Sum all "1"s in value list
-    Emit result "(word, sum)"
+
+   &rightarrow; For each word w in contents, emit (w, "1")
+   
+   &rightarrow;Reduce(key=word, values=uniq_counts):
+   
+    ++ Sum all "1"s in value list
+    ++ Emit result "(word, sum)"
 
 # DFS : data file system
 Automatic parallel execution in mapReduce
