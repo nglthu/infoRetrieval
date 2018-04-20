@@ -80,10 +80,10 @@ throw 1
 
    &rightarrow; For each word w in contents, emit (w, "1")
    
-   &rightarrow;Reduce(key=word, values=uniq_counts):
+   &rightarrow; Reduce(key=word, values=uniq_counts):
    
-    ++ Sum all "1"s in value list
-    ++ Emit result "(word, sum)"
+    + Sum all "1"s in value list
+    + Emit result "(word, sum)"
 
 # DFS : data file system
 Automatic parallel execution in mapReduce
