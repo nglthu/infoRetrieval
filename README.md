@@ -137,7 +137,7 @@ Level multiple options.
 #	Tolerant Retrieval
 ##	Wild-card queries
 
-e.g. *mon: fine words ending with mon
+e.g. *mon: to find words ending with mon
 
 ##	Query processing
 
