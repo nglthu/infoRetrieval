@@ -3,12 +3,23 @@ import math
 import sqlite3
 import time
 
+
+
+PYTHONIOENCODING="UTF-8"
+
+scriptpath = "/Data/SourceCode/infoRetrieval/posterStemmer.py"
+sys.path.append(os.path.abspath(scriptpath))
+import posterStemmer
+#from porterstemmer import PorterStemmer
+
 # clear python screen
 os.system('cls')
 
-# the database is a simple dictionnary database = {}
+# the database is a simple dictionnary
+database = {}
 
-# regular expression for: extract words, extract ID from path, check for hexa value chars = re.compile(r'\W+')
+# regular expression for: extract words, extract ID from path, check for hexa value
+chars = re.compile(r'\W+')
 pattid= re.compile(r'(\d{3})/(\d{3})/(\d{3})')
 
 # the higher ID
@@ -53,7 +64,7 @@ def parsetoken(line):
 
 # This statement converts all letters to lower case
         lowerElmt = elmt.lower().strip()
-
+        lowerElmt = posterStemmer.PorterStemmer().stem(lowerElmt, 0, len(lowerElmt) - 1)
 #
 # Increment the counter of the number of tokens processed. This value will
 # provide the total size of the corpus in terms of the number of terms in the
@@ -95,10 +106,10 @@ def process(filename):
     except IOError:
         print("Error in file %s" % filename)
         return False 
-    #else
-    #for l in file.readlines() :
-    #    parsetoken(l)
-    file.close()
+    else :
+        for l in file.readlines() :
+            parsetoken(l)
+            file.close()
 # This function will scan through the specified directory structure selecting
 # every file for processing by the tokenizer function
 # Notices how this is a recursive function in that it calls itself to process
@@ -137,7 +148,7 @@ print('Start Time: %.2d:%.2d' % (t2.tm_hour, t2.tm_min))
 # directory or another directory that you choose. If you use another directory make sure that
 # you point folder to the appropriate directory.
 #
-folder = "/Data/GoogleDrive/InformationRetrival/reuters_corpus"
+folder = "/Data/GoogleDrive/InformationRetrival/reuters_corpus/cacm/"
 
 #/Data/GoogleDrive/InformationRetrival
 # Create a sqlite database to hold the inverted index. The isolation_level statment turns
@@ -209,4 +220,3 @@ print("Total number of terms parsed from all documents %i" % terms)
 print("Total number of unique terms found and added to the index %i" % tokens)
 t2 = time.localtime()
 print('End Time: %.2d:%.2d' % (t2.tm_hour, t2.tm_min))
-print("Total number of terms found that matched one of the stop words in your program’s stop words list")
